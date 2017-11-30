@@ -214,6 +214,8 @@ public class SearchByCourse {
 
 				frame.setVisible(false);
 				
+				Integer[] arrayFin =new MainApp().ChosenCarrer(espArray);
+				
 				
 			}
 		});

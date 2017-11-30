@@ -6,6 +6,11 @@ import java.util.Map;
 
 public class MainApp {
 	
+	public String Isc= "Ingeniería en Sistemas Computacionales";
+	public String Ldi= "Licenciatura en Diseño Industrial";
+	public String Mc= "Médico Cirujano";
+	public String Null= "No careers match";
+	
 	private static Integer[] CoursesIsc= {1,2,3,4,5,6,7,8,9,10};
 	private static Integer [] CoursesLdi = {1,2,3,4,5,11,12,13,14,15};
 	private static Integer [] CoursesMc = {1,2,3,4,5,16,17,18,19,20};
@@ -45,6 +50,60 @@ public class MainApp {
 		return result;
 	}
 	
+	public String valoresPLan(int x, int y) {
+		
+		String original="";
+		
+		switch (x) {
+			case 1: original = PrintableCourses(CoursesIsc).toString();
+					break;
+			case 2: original = PrintableCourses(CoursesLdi).toString();
+					break;
+			case 3: original = PrintableCourses(CoursesMc).toString();
+					break;
+		}
+		
+		int indexOfOpenBracket = original.indexOf("[");
+		int indexOfLastBracket = original.lastIndexOf("]");
+		
+		String originalBL = original.substring(indexOfOpenBracket+1, indexOfLastBracket);
+		String[] array = (originalBL.split("\\s*,\\s*"));
+		
+		return array[y];
+		
+	}
+	
+	public Integer[] ChosenCarrer(Integer[] espArray) {
+		int CountIsc=0;
+		int CountIdi=0;
+		int CountMc=0;
+		Integer[] finalStr;
+		finalStr=new Integer[3];
+		
+		for(int i=0; i<espArray.length; i++) {
+			//System.out.println("Course"+espArray[i]);
+			if(i>=6 || i<=10) {
+				CountIsc++;
+			}else if(i>=11 || i<=15){
+				CountIdi++;
+			}else {
+				CountIdi++;
+			}
+		}
+		
+		//System.out.println("countISC: "+ CountIsc);
+		if(CountIsc!=0) {
+			//return Isc;
+			finalStr[0]=1;
+		}else if(CountIdi!=0) {
+			//return Ldi;
+			finalStr[1]=1;
+		}else if(CountMc!=0) {
+			//return Mc;
+			finalStr[2]=1;
+		}
+		return finalStr;
+	}
 	
 	public static void main( String [] args) {
 		//System.out.println("hello world");
@@ -79,27 +138,6 @@ public class MainApp {
 
 	}
 	
-	public String valoresPLan(int x, int y) {
-		
-		String original="";
-		
-		switch (x) {
-			case 1: original = PrintableCourses(CoursesIsc).toString();
-					break;
-			case 2: original = PrintableCourses(CoursesLdi).toString();
-					break;
-			case 3: original = PrintableCourses(CoursesMc).toString();
-					break;
-		}
-		
-		int indexOfOpenBracket = original.indexOf("[");
-		int indexOfLastBracket = original.lastIndexOf("]");
-		
-		String originalBL = original.substring(indexOfOpenBracket+1, indexOfLastBracket);
-		String[] array = (originalBL.split("\\s*,\\s*"));
-		
-		return array[y];
-		
-	}
+
 	
 }
