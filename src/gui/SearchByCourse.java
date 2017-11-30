@@ -5,6 +5,8 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.FlowLayout;
 import javax.swing.JLabel;
 import java.awt.Font;
@@ -63,9 +65,6 @@ public class SearchByCourse {
 		String[] com_4 = {"-Selecciona-","English"};
 		String[] com_5 = {"-Selecciona-","Ethics"};
 		
-		
-		
-		
 		JComboBox troncoBox1 = new JComboBox(com_1);
 		topSelection.add(troncoBox1);
 		
@@ -104,9 +103,9 @@ public class SearchByCourse {
 		
 		JComboBox EspecializadaBox1 = new JComboBox(esp_1);
 		bottomSelection.add(EspecializadaBox1);
-		
+
 		JComboBox EspecializadaBox2 = new JComboBox(esp_2);
-		bottomSelection.add(EspecializadaBox2);
+		bottomSelection.add(EspecializadaBox2);		
 		
 		JComboBox EspecializadaBox3 = new JComboBox(esp_3);
 		bottomSelection.add(EspecializadaBox3);
@@ -126,6 +125,109 @@ public class SearchByCourse {
 		
 		JButton btnSubmit = new JButton("Submit");
 		submitOrCancel.add(btnSubmit);
+		
+
+		
+		btnSubmit.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				Object esp1;
+				Object esp2;
+				Object esp3;
+				Object esp4;
+				Object esp5;
+				Integer[] espArray;
+				espArray=new Integer[5];
+				
+				
+				esp1=EspecializadaBox1.getSelectedItem();
+				if (esp1.equals("-Selecciona-")) {
+					esp1="";
+				}
+				
+				switch (esp1.toString()) {
+					case "POO" : espArray[0]=6;
+						break;
+					case "Drawing" : espArray[0]=11;
+						break;
+					case "Metabolism" : espArray[0]=16;
+						break;
+				}
+				
+				esp2=EspecializadaBox2.getSelectedItem();
+				if (esp2.equals("-Selecciona-")) {
+					esp2="";
+				}
+				
+				switch (esp2.toString()) {
+				case "Mobile Apps" : espArray[1]=7;
+					break;
+				case "Descriptive Geometry" : espArray[1]=12;
+					break;
+				case "Biostatistics" : espArray[1]=17;
+					break;
+				}
+				
+				esp3=EspecializadaBox3.getSelectedItem();
+				if (esp3.equals("-Selecciona-")) {
+					esp3="";
+				}
+				
+				switch (esp3.toString()) {
+				case "Algorithms" : espArray[2]=8;
+					break;
+				case "Computarized Drawing": espArray[2]=13;
+					break;
+				case "Morfofisiology" : espArray[2]=18;
+					break;
+				}
+				
+				esp4=EspecializadaBox4.getSelectedItem();
+				if (esp4.equals("-Selecciona-")) {
+					esp4="";
+				}
+				
+				switch (esp4.toString()) {
+				case "Data Structures": espArray[3]=9;
+					break;
+				case "Creativity and Innovartion": espArray[3]=14;
+					break;
+				case "Pediatrics": espArray[3]=19;
+					break;
+				}
+				
+				esp5=EspecializadaBox5.getSelectedItem();
+				if (esp5.equals("-Selecciona-")) {
+					esp5="";
+				}
+				
+				switch (esp5.toString()) {
+				case "Operative Systems": espArray[4]=10;
+					break;
+				case "Prototypes Workshop": espArray[4]=15;
+					break;
+				case "Gynecology": espArray[4]=20;
+					break;
+				}
+
+				frame.setVisible(false);
+				
+				
+			}
+		});
+		
+		btnCancel.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				frame.setVisible(false);
+				new ApplicationWindow().start();
+			}
+		});
 	}
+	
 
 }

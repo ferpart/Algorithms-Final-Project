@@ -26,7 +26,7 @@ public class ApplicationWindow {
 	/**
 	 * Launch the application.
 	 */
-	public static void main(String[] args) {
+	/*public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
@@ -37,6 +37,24 @@ public class ApplicationWindow {
 				}
 			}
 		});
+	}*/
+	
+	public void startMain() {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					ApplicationWindow window = new ApplicationWindow();
+					window.frame1.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+	
+	
+	public void start() {
+		frame1.setVisible(true);
 	}
 
 	/**

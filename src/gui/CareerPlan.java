@@ -13,6 +13,7 @@ import java.awt.Font;
 public class CareerPlan {
 
 	
+	private MainApp appLoad = new MainApp();
 	
 	private JFrame frame;
 	
@@ -99,11 +100,11 @@ public class CareerPlan {
            String pt2 =
                "'><h2>Tronco Común</h2>" +
                "<ul>" + 
-               "<li>Math</li>" + 
-               "<li>Physics 1</li>" + 
-               "<li>EVAP</li>" +
-               "<li>English</li>" +
-               "<li>Ethics</li>" +
+               "<li>"+appLoad.valoresPLan(1, 0)+"</li>" + 
+               "<li>"+appLoad.valoresPLan(1, 1)+"</li>" + 
+               "<li>"+appLoad.valoresPLan(1, 2)+"</li>" +
+               "<li>"+appLoad.valoresPLan(1, 3)+"</li>" +
+               "<li>"+appLoad.valoresPLan(1, 4)+"</li>" +
                "</ul>";
            int width = 175;
            
@@ -118,11 +119,11 @@ public class CareerPlan {
 	           String pt2 =
 	               "'><h2>Materias Especiales</h2>" +
 	               "<ul>" + 
-	               "<li>POO</li>" + 
-	               "<li>Mobile Apps</li>" + 
-	               "<li>Algorithms</li>" +
-	               "<li>Data Structures</li>" +
-	               "<li>Operative Systems</li>" +
+	               "<li>"+appLoad.valoresPLan(1, 5)+"</li>" + 
+	               "<li>"+appLoad.valoresPLan(1, 6)+"</li>" + 
+	               "<li>"+appLoad.valoresPLan(1, 7)+"</li>" +
+	               "<li>"+appLoad.valoresPLan(1, 8)+"</li>" +
+	               "<li>"+appLoad.valoresPLan(1, 9)+"</li>" +
 	               "</ul>";
 	           int width = 175;
 	           
@@ -137,11 +138,11 @@ public class CareerPlan {
 	           String pt2 =
 	               "'><h2>Materias Especiales</h2>" +
 	               "<ul>" + 
-	               "<li>Drawing</li>" + 
-	               "<li>Descriptive Geometry</li>" + 
-	               "<li>Computarized Drawing</li>" +
-	               "<li>Creativity and Innovation</li>" +
-	               "<li>Prototypes Workshop</li>" +
+	               "<li>"+appLoad.valoresPLan(2, 5)+"</li>" + 
+	               "<li>"+appLoad.valoresPLan(2, 6)+"</li>" + 
+	               "<li>"+appLoad.valoresPLan(2, 7)+"</li>" +
+	               "<li>"+appLoad.valoresPLan(2, 8)+"</li>" +
+	               "<li>"+appLoad.valoresPLan(2, 9)+"</li>" +
 	               "</ul>";
 	           int width = 175;
 	           
@@ -156,11 +157,11 @@ public class CareerPlan {
 	           String pt2 =
 	               "'><h2>Materias Especiales</h2>" +
 	               "<ul>" + 
-	               "<li>Metabolism</li>" + 
-	               "<li>Biostatistics</li>" + 
-	               "<li>Morfofisiology</li>" +
-	               "<li>Pediatrics</li>" +
-	               "<li>Gynecology</li>" +
+	               "<li>"+appLoad.valoresPLan(3, 5)+"</li>" + 
+	               "<li>"+appLoad.valoresPLan(3, 6)+"</li>" + 
+	               "<li>"+appLoad.valoresPLan(3, 7)+"</li>" +
+	               "<li>"+appLoad.valoresPLan(3, 8)+"</li>" +
+	               "<li>"+appLoad.valoresPLan(3, 9)+"</li>" +
 	               "</ul>";
 	           int width = 175;
 	           
