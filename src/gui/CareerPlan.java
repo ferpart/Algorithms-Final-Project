@@ -53,7 +53,7 @@ public class CareerPlan {
 		JPanel TopPanel = new JPanel();
 		frame.getContentPane().add(TopPanel, BorderLayout.NORTH);
 		
-		JLabel lblPlanDeCarrera = new JLabel("Plan de Carrera: ");
+		JLabel lblPlanDeCarrera = new JLabel("Plan de Carrera " + x + ":" );
 		lblPlanDeCarrera.setFont(new Font("Tahoma", Font.PLAIN, 24));
 		TopPanel.add(lblPlanDeCarrera);
 		

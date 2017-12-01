@@ -1,6 +1,7 @@
 package gui;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -77,51 +78,47 @@ public class MainApp {
 		int CountIsc=0;
 		int CountIdi=0;
 		int CountMc=0;
-		Integer[] finalStr;
-		finalStr=new Integer[3];
+		Integer[] finalStr= {0,0,0};
 		
 		for(int i=0; i<espArray.length; i++) {
-			//System.out.println("Course"+espArray[i]);
-			if(i>=6 || i<=10) {
-				CountIsc++;
-			}else if(i>=11 || i<=15){
-				CountIdi++;
-			}else {
-				CountIdi++;
+			if (espArray[i]!=null) {
+				if(espArray[i]>=6 && espArray[i]<=10) {
+					CountIsc++;
+				}
+				if(espArray[i]>=11 && espArray[i]<=15){
+					CountIdi++;
+				}
+				if(espArray[i]>=16 && espArray[i]<=20) {
+					CountMc++;
+				}
 			}
 		}
 		
-		//System.out.println("countISC: "+ CountIsc);
 		if(CountIsc!=0) {
 			//return Isc;
 			finalStr[0]=1;
-		}else if(CountIdi!=0) {
+		}
+		if(CountIdi!=0) {
 			//return Ldi;
 			finalStr[1]=1;
-		}else if(CountMc!=0) {
+		}
+		if(CountMc!=0) {
 			//return Mc;
 			finalStr[2]=1;
 		}
+		
+
+		
 		return finalStr;
 	}
 	
 	public static void main( String [] args) {
-		//System.out.println("hello world");
+
 
 		
 		Tree Isc = new Tree(CoursesIsc);
 		Tree Ldi = new Tree(CoursesLdi);
 		Tree Mc = new Tree(CoursesLdi);
-
-
-		System.out.println(Isc.first());
-		System.out.println(Ldi.first());
-		System.out.println(Mc.first());
-
-
-		System.out.println(PrintableCourses(CoursesIsc).toString());
-		System.out.println(PrintableCourses(CoursesLdi).toString());
-		System.out.println(PrintableCourses(CoursesMc).toString());
 		
 		
 		String original = PrintableCourses(CoursesIsc).toString();
@@ -132,7 +129,7 @@ public class MainApp {
 		String originalBL = original.substring(indexOfOpenBracket+1, indexOfLastBracket);
 		
 		String[] array = (originalBL.split("\\s*,\\s*"));
-		System.out.println(array[0]);
+
 		
 		new ApplicationWindow().startMain();
 
