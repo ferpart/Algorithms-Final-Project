@@ -14,8 +14,6 @@ import javax.swing.JButton;
 import javax.swing.SwingConstants;
 import java.awt.Font;
 import java.awt.BorderLayout;
-import java.awt.FlowLayout;
-import java.awt.CardLayout;
 
 public class CareerPercent {
 	

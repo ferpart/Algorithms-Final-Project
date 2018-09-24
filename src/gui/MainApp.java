@@ -1,7 +1,7 @@
 package gui;
 
 import java.util.ArrayList;
-import java.util.Arrays;
+//import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -116,7 +116,7 @@ public class MainApp {
 
 
 		
-		Tree Isc = new Tree(CoursesIsc);
+		/*Tree Isc = new Tree(CoursesIsc);
 		Tree Ldi = new Tree(CoursesLdi);
 		Tree Mc = new Tree(CoursesLdi);
 		
@@ -128,7 +128,7 @@ public class MainApp {
 
 		String originalBL = original.substring(indexOfOpenBracket+1, indexOfLastBracket);
 		
-		String[] array = (originalBL.split("\\s*,\\s*"));
+		String[] array = (originalBL.split("\\s*,\\s*"));*/
 
 		
 		new ApplicationWindow().startMain();
